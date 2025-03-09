@@ -14,6 +14,8 @@
 
 ### Planned Features
 
+- [ ] Task deletion
+- [ ] Task editing
 - [ ] User authentication
 - [ ] Cloud synchronization
 - [ ] Dark/Light theme toggle
@@ -24,8 +26,6 @@
 ### Completed Features
 
 - [x] Basic task creation
-- [x] Task deletion
-- [x] Task editing
 - [x] Basic UI implementation
 
 ## 🚀 Features
