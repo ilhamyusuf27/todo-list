@@ -1,0 +1,37 @@
+{
+  "semi": true,
+  "tabWidth": 2,
+  "printWidth": 100,
+  "singleQuote": true,
+  "trailingComma": "all",
+  "jsxSingleQuote": false,
+  "bracketSpacing": true,
+  "bracketSameLine": false,
+  "arrowParens": "always",
+  "endOfLine": "auto",
+  "plugins": ["@trivago/prettier-plugin-sort-imports"],
+  "importOrder": [
+    "^react",
+    "^@?\\w",
+    "^(@|components)(/.*|$)",
+    "^(@|contexts)(/.*|$)", 
+    "^(@|hooks)(/.*|$)",
+    "^(@|utils)(/.*|$)",
+    "^[./]"
+  ],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true,
+  "htmlWhitespaceSensitivity": "ignore",
+  "overrides": [
+    {
+      "files": ["*.tsx", "*.jsx", "*.js", "*.ts"],
+      "options": {
+        "printWidth": 100,
+        "htmlWhitespaceSensitivity": "ignore",
+        "singleAttributePerLine": true,
+        "jsxBracketSameLine": false,
+        "jsxSingleQuote": false
+      }
+    }
+  ]
+}
