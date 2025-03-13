@@ -10,9 +10,7 @@ const DefaultLayout = () => {
     <div className="flex">
       <SideNavbar />
       <div className="flex-1 pl-75">
-        <main>
-          <Outlet />
-        </main>
+        <Outlet />
       </div>
     </div>
   );

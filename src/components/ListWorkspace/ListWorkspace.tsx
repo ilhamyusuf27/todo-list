@@ -2,11 +2,7 @@
 // import React from 'react'
 import { useState } from 'react';
 
-import {
-  DndContext,
-  MeasuringStrategy,
-  closestCorners,
-} from '@dnd-kit/core';
+import { DndContext, MeasuringStrategy, closestCorners } from '@dnd-kit/core';
 import { SortableContext, arrayMove, verticalListSortingStrategy } from '@dnd-kit/sortable';
 
 import DragableColumn from '../DragableColumn';
@@ -25,14 +21,15 @@ interface Props {
 const ListWorkspace = (props: Props) => {
   const { title } = props;
   const [tasks, setTasks] = useState<Tasks[]>([
-    { id: 1, emoji: "📖", name: 'Complete React project' },
-    { id: 2, emoji: "🫤", name: 'Review pull requests' },
-    { id: 3, emoji: "🥼", name: 'Write unit tests' },
+    { id: 1, emoji: '📖', name: 'Complete React project' },
+    { id: 2, emoji: '🫤', name: 'Review pull requests' },
+    { id: 3, emoji: '🥼', name: 'Write unit tests' },
   ]);
 
   const getTaskPos = (id: number) => tasks.findIndex((task: Tasks) => task.id === id);
 
-  const handleAddTask = () => setTasks((prev) => [...prev, { id: tasks.length + 1, emoji: "🗋", name: "Untitled" }]);
+  const handleAddTask = () =>
+    setTasks((prev) => [...prev, { id: tasks.length + 1, emoji: '🗋', name: 'Untitled' }]);
 
   const handleDragEnd = (event: any) => {
     const { active, over } = event;
@@ -63,8 +60,8 @@ const ListWorkspace = (props: Props) => {
           <SortableContext
             items={tasks}
             strategy={verticalListSortingStrategy}
-          // Add these props
-          // animateLayoutChanges={() => false}
+            // Add these props
+            // animateLayoutChanges={() => false}
           >
             {tasks.map((task: Tasks) => (
               <DragableColumn
@@ -75,7 +72,10 @@ const ListWorkspace = (props: Props) => {
           </SortableContext>
         </DndContext>
       </div>
-      <div className="flex items-center gap-1 cursor-pointer hover:bg-gray-100 hover:rounded-sm px-2 py-2" onClick={handleAddTask}>
+      <div
+        className="flex items-center gap-1 cursor-pointer hover:bg-gray-100 hover:rounded-sm px-2 py-2"
+        onClick={handleAddTask}
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"

@@ -1,11 +1,12 @@
 // import React from 'react';
 import { useSortable } from '@dnd-kit/sortable';
 import { CSS } from '@dnd-kit/utilities';
+import DragIcon from '../DragIcon';
 
 interface Props {
   name: string;
   id: string | number;
-  emoji: string,
+  emoji: string;
 }
 
 const DragableColumn = (props: Props) => {
@@ -31,33 +32,8 @@ const DragableColumn = (props: Props) => {
       {...listeners}
       style={style}
     >
-      <div className="flex gap-0">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="currentColor"
-          className="size-3 text-secondary"
-        >
-          <path
-            fillRule="evenodd"
-            d="M10.5 6a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm0 6a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm0 6a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Z"
-            clipRule="evenodd"
-          />
-        </svg>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="currentColor"
-          className="size-3 -ml-2 text-secondary"
-        >
-          <path
-            fillRule="evenodd"
-            d="M10.5 6a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm0 6a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm0 6a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Z"
-            clipRule="evenodd"
-          />
-        </svg>
-      </div>
-      <div className='w-4 h-4 inline-flex items-center justify-center'>{emoji}</div>
+      <DragIcon />
+      <div className="w-4 h-4 inline-flex items-center justify-center">{emoji}</div>
       <div className="text-sm">{name}</div>
     </div>
   );

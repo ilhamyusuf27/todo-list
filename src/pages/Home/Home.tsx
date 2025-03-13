@@ -1,7 +1,20 @@
+import { DndContext, closestCorners } from "@dnd-kit/core";
+import Workspaces from "../../components/Workspaces";
+import { SortableContext } from "@dnd-kit/sortable";
+
 const Home: React.FC = () => {
   return (
     <div>
-      <h1>Home</h1>
+      <Workspaces>
+        <DndContext
+          collisionDetection={closestCorners}
+        >
+          {/* <SortableContext>
+            
+          </SortableContext> */}
+
+        </DndContext>
+      </Workspaces>
     </div>
   );
 };
